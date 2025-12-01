@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <section id="start-screen" class="flex flex-col text-center items-center justify-center w-full h-screen bg-blue-700 p8">
+        <h1 class="text-5xl font-extrabold mb-8">Welcome to the Quiz</h1>
+        <button id="start-button" class="px-10 py-4 text-xl font-semibold text-white bg-green-500 rounded-full cursor-pointer m-1 hover:bg-green-600 transition">
+            Start Quiz
+        </button>
+    </section>
+    
+    <section id="question-card" 
+    class="hidden w-full h-screen flex-col items-center justify-between p-8 m-1 bg-blue-700 ">
+        <h2 id="question-text" class="text-center text-4xl font-extrabold mb-4"></h2>
+        <div id="answer-buttons" class="justify-around flex flex-row flex-wrap w-full gap-x-4">
+            <button data-index="0" class="answer-btn border-solid border-black border-2 bg-amber-500 text-white cursor-pointer px-3 py-4 rounded-2xl hover:bg-amber-600 transition"></button>
+            <button data-index="1" class="answer-btn border-solid border-black border-2 bg-amber-500 text-white cursor-pointer px-3 py-4 rounded-2xl hover:bg-amber-600 transition"></button>
+            <button data-index="2" class="answer-btn border-solid border-black border-2 bg-amber-500 text-white cursor-pointer px-3 py-4 rounded-2xl hover:bg-amber-600 transition"></button>
+        </div>
+        <div id="feedback-area" class="text-center mt-6 flex justify-center items-center text-4xl"></div>
+        <div class="w-full flex justify-end">
+            <button id="next-button" class="bg-amber-500 text-white cursor-pointer px-4 py-3 rounded-2xl hover:bg-amber-600 mt-auto">Next Question</button>
+        </div>
+        
+    </section>
+        
+    <section id="result-screen" class="hidden flex flex-col items-center justify-center w-full h-screen bg-blue-700 text-white p-8">
+        <div class="bg-white text-blue-900 rounded-xl shadow-2xl p-8 max-w-2xl w-full text-center mb-8">
+            <h2 class="text-5xl font-extrabold mb-4">You finished the Quiz!! 🎉</h2>
+            <p id="finalScore" class=" text-4xl mb-4 font-bold">Your score: 3/6</p>
+        </div>
+
+        <div id="results-container" class="w-full max-w-2xl h-80 overflow-y-auto bg-white/20 p-4 rounded-lg shadow-inner mb-6 space-y-4">
+        </div>
+        
+        <div id="navigation-buttons" class="flex flex-row flex-wrap justify-around gap-x-6 w-full max-w-lg">
+            <button id="restart-button" class="text-xl font-semibold text-white bg-green-500 rounded-full cursor-pointer m-1 px-8 py-3 shadow-lg hover:bg-green-600 transition">
+                Restart Quiz</button>
+            <button id="exit-button" class="text-xl font-semibold text-white bg-red-500 rounded-full cursor-pointer m-1 px-8 py-3 shadow-lg hover:bg-red-600 transition">
+                Exit Quiz</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
